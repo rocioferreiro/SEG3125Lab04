@@ -6,4 +6,5 @@
 3. David Thomas - 300137596
 4. Teo Vogel - 300215037
 
+All images were taken from: https://unsplash.com/
 ## File Structure
