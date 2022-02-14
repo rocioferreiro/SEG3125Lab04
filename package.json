@@ -1,0 +1,25 @@
+{
+  "name": "lab04",
+  "version": "1.0.0",
+  "description": "## Team Members - Student Number 1. Steven Shyaka - 300026619 2. Rocio Ferreiro - 300271563 3. David Thomas - 300137596 4. Teo Vogel - 300215037",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEG3125Group/Lab04.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SEG3125Group/Lab04/issues"
+  },
+  "homepage": "https://github.com/SEG3125Group/Lab04#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
