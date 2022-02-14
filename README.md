@@ -8,4 +8,5 @@
 
 All images were taken from: https://unsplash.com/
 Masthead taken from: https://jsfiddle.net/StartBootstrap/q4khv018/
+Gallery taken from: https://mdbootstrap.com/docs/standard/extended/gallery/
 ## File Structure
