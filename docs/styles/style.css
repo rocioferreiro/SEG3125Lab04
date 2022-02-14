@@ -11,3 +11,6 @@ html {
 #contact{
   height:20vh;
 }
+#services, #team, #gallery{
+  height:100vh;
+}
