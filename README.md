@@ -7,4 +7,5 @@
 4. Teo Vogel - 300215037
 
 All images were taken from: https://unsplash.com/
+Masthead taken from: https://jsfiddle.net/StartBootstrap/q4khv018/
 ## File Structure
