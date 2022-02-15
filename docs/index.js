@@ -1,5 +1,7 @@
 var saveChanges = document.getElementById('save-changes');
 saveChanges.addEventListener('click', calculatePrice);
+document.getElementById('inputService').addEventListener('change', calculatePrice);
+document.getElementById('inputHairLength').addEventListener('change', calculatePrice);
 function calculatePrice(){
     var service = document.getElementById('inputService').value;
     var hairLength = document.getElementById('inputHairLength').value;
