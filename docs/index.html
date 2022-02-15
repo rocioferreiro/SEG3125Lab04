@@ -324,20 +324,20 @@
           <form>
             <div class="row py-2">
               <div class="col">
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="First name" required>
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Last name">
-              </div>
-            </div>
-            <div class="row py-2">
-              <div class="col">
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="Last name" required>
               </div>
             </div>
             <div class="row py-2">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Phone Number">
+                <input type="email" class="form-control" placeholder="Email" required>
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Phone Number" required>
               </div>
             </div>
             <div class="row py-2">
@@ -361,11 +361,11 @@
             </div>
             <div class="row py-3">
               <div class="col">
-                <input type="datetime-local" class="form-control" placeholder="Date & Time">
+                <input type="datetime-local" class="form-control" placeholder="Date & Time" required>
               </div>
 
             </div>
-            <div class="row py-3">
+            <!--div class="row py-3">
               <div class="col">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
@@ -379,8 +379,8 @@
                     Pay with Cash
                   </label>
                 </div>
-            </div>
-            </div>
+            </div
+            </div>-->
             <div class="row py-4">
               <div class="col">
                 <p>Subtotal: <span id="subtotal"></span></p>
@@ -389,11 +389,9 @@
                 <h4>Total: <span id="total"></span></h4>
               </div>
             </div>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary text-white" id="confirm-bnooking" type="submit">Confirm Booking</button>
           </form>
-        </div>
-        <div class="modal-footer border-0">
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary text-white" id="save-changes">Save changes</button>
         </div>
       </div>
     </div>
