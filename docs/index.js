@@ -60,12 +60,17 @@ function calculatePrice(){
     document.getElementById("hst").innerText = "$"+hst;
     document.getElementById("gst").innerText = "$"+gst;
     document.getElementById("total").innerText = "$"+total;
+    document.getElementById("payment-disclaimer").innerHTML = 
+    `<i>Accepted payments in-salon: Cash, Interact, Credit<br>
+    No online payments accepted at this time
+    </i>`;
 }
 else{
     document.getElementById("subtotal").innerText = "";
     document.getElementById("hst").innerText = "";
     document.getElementById("gst").innerText = "";
     document.getElementById("total").innerText = "";
+    document.getElementById("payment-disclaimer") = "";
 }
 
 }
