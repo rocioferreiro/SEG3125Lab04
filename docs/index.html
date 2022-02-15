@@ -14,8 +14,7 @@
 
 <body>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
         <a class="navbar-brand" href=""><img src="./images/logo.png" width="50px" height="50px" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,14 +33,13 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
-
-            <li class="nav-item">
-              <button class="btn btn-outline-primary">BOOK NOW</button>
-            </li>
-  
           </ul>
+          <button class="btn btn-outline-primary my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">
+            BOOK NOW
+          </button>
+
         </div>
-      </div>
+
     </nav>
     <!-- https://jsfiddle.net/StartBootstrap/q4khv018/ -->
     <header class="masthead text-white">
@@ -101,7 +99,7 @@
 
       </div>
     </div>
-    <div id="services">
+    <div id="services" class="jumbotron jumbotron-fluid">
       <div class="container h-100">
         <div class="row h-100 align-items-center text-center">
           <h1>WHAT WE DO</h1>
@@ -245,8 +243,83 @@
 
 
   </div>
+
+
+  <div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
+        </div>
+        <div class="modal-body border-0">
+          <form>
+            <div class="row py-2">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Last name">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col">
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+            </div>
+            <div class="row py-2">
+              <div class="col">
+                <select id="inputService" class="form-control">
+                  <option selected> Service </option>
+                  <option> Wash, Cut & Style </option>
+                  <option> Shampoo & Blowdry </option>
+                  <option> Full Color </option>
+                </select>
+              </div>
+              <div class="col">
+                <input type="datetime-local" class="form-control" placeholder="Date & Time">
+              </div>
+            </div>
+            <div class="row py-3">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <label class="form-check-label" for="gridRadios1">
+                    Pay with Credit / Debit Card
+                  </label>
+              </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <label class="form-check-label" for="gridRadios2">
+                    Pay with Cash
+                  </label>
+                </div>
+            </div>
+            </div>
+            <div class="row py-4">
+              <div class="col">
+                <h4> Total Estimate: $$$ </h4>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap Bundle with Popper -->
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
