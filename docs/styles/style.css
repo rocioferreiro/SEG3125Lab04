@@ -8,11 +8,8 @@ html {
     background-position: center;
     background-repeat: no-repeat;
   }
-#contact{
-  height:20vh;
-}
-#services, #team, #gallery{
-  height:100vh;
+#services, #team, #gallery, #contact {
+  margin: 100px 0;
 }
 
 .card {
