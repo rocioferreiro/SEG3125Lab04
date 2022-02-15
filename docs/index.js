@@ -1,9 +1,26 @@
 var inputService = document.getElementById('inputService');
 var inputHairLength = document.getElementById('inputHairLength');
-
+var inputs = document.getElementsByClassName('form-control');
 inputService.addEventListener('change', calculatePrice);
 inputHairLength.addEventListener('change', calculatePrice);
 
+
+for (var i = 0; i < inputs.length; i++){
+    if (i!=4 && i!=5){
+    inputs[i].addEventListener('change', checkIfReady);}
+}
+
+function checkIfReady(){
+    for (var i = 0; i < inputs.length; i++){
+        
+        if (inputs[i].value==""){
+            document.getElementById("confirm-booking").disabled = true;
+            return;
+        }
+        
+    }
+    document.getElementById("confirm-booking").disabled = false;
+}
 function calculatePrice(){
     if (inputService.value != "Service" && inputHairLength.value != "Hair Length"){
     var service = document.getElementById('inputService').value;
@@ -70,7 +87,7 @@ else{
     document.getElementById("hst").innerText = "";
     document.getElementById("gst").innerText = "";
     document.getElementById("total").innerText = "";
-    document.getElementById("payment-disclaimer") = "";
+    document.getElementById("payment-disclaimer").innerHTML = "";
 }
 
 }
