@@ -4,12 +4,26 @@ var inputs = document.getElementsByClassName('form-control');
 inputService.addEventListener('change', calculatePrice);
 inputHairLength.addEventListener('change', calculatePrice);
 
-
 for (var i = 0; i < inputs.length; i++){
     if (i!=4 && i!=5){
     inputs[i].addEventListener('change', checkIfReady);}
 }
 
+/****Remove Navbar on Scroll Down****/
+let navbar = document.querySelector('.scrollHide');
+let previousPositionY = 0;
+window.addEventListener('scroll', function() {
+  let currentPositionY = window.scrollY;
+  if(currentPositionY < previousPositionY){
+    navbar.classList.remove('scrolled-down');
+    navbar.classList.add('scrolled-up');
+  } else {
+    navbar.classList.remove('scrolled-up');
+    navbar.classList.add('scrolled-down');
+  }
+  previousPositionY = currentPositionY;
+});
+/************************************/
 function checkIfReady(){
     for (var i = 0; i < inputs.length; i++){
         
