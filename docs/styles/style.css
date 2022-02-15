@@ -9,7 +9,7 @@ html {
     background-repeat: no-repeat;
   }
 #services, #team, #gallery, #contact {
-  margin: 100px 0;
+  padding: 100px 0;
 }
 
 .card {
