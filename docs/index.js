@@ -1,6 +1,11 @@
-document.getElementById('inputService').addEventListener('change', calculatePrice);
-document.getElementById('inputHairLength').addEventListener('change', calculatePrice);
+var inputService = document.getElementById('inputService');
+var inputHairLength = document.getElementById('inputHairLength');
+
+inputService.addEventListener('change', calculatePrice);
+inputHairLength.addEventListener('change', calculatePrice);
+
 function calculatePrice(){
+    if (inputService.value != "Service" && inputHairLength.value != "Hair Length"){
     var service = document.getElementById('inputService').value;
     var hairLength = document.getElementById('inputHairLength').value;
     var subtotal = 0;
@@ -55,6 +60,13 @@ function calculatePrice(){
     document.getElementById("hst").innerText = "$"+hst;
     document.getElementById("gst").innerText = "$"+gst;
     document.getElementById("total").innerText = "$"+total;
+}
+else{
+    document.getElementById("subtotal").innerText = "";
+    document.getElementById("hst").innerText = "";
+    document.getElementById("gst").innerText = "";
+    document.getElementById("total").innerText = "";
+}
 
 }
 function roundToHundredths( number ){
