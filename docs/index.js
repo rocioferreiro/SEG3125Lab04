@@ -1,12 +1,42 @@
 var inputService = document.getElementById('inputService');
 var inputHairLength = document.getElementById('inputHairLength');
 var inputs = document.getElementsByClassName('form-control');
+var form = document.getElementById('modal-form');
+var closeToastEl = document.getElementById('close-toast');
 inputService.addEventListener('change', calculatePrice);
 inputHairLength.addEventListener('change', calculatePrice);
+form.addEventListener('submit', openToast);
+closeToastEl.addEventListener('click', closeToast);
+
 
 for (var i = 0; i < inputs.length; i++){
     if (i!=4 && i!=5){
     inputs[i].addEventListener('change', checkIfReady);}
+}
+
+function openToast() {
+    $('#success-toast').toast('show');
+    document.getElementById('exampleModal').classList.remove("show");
+    document.getElementById('exampleModal').style.display = "none";
+    document.getElementsByClassName('modal-backdrop')[0].style.display = "none";
+    document.getElementsByClassName('modal-backdrop')[0].classList.remove("show");
+    for (var i = 0; i < inputs.length; i++){
+        inputs[i].value = ""
+    }
+    inputService.value = "Service";
+    inputHairLength.value = "Hair Length";
+
+    document.getElementById("subtotal").innerText = "";
+    document.getElementById("hst").innerText = "";
+    document.getElementById("gst").innerText = "";
+    document.getElementById("total").innerText = "";
+    document.getElementById("payment-disclaimer").innerHTML = "";
+    return false;
+}
+
+function closeToast() {
+    //document.getElementById("success-toast").classList.remove("show");
+    $('#success-toast').toast('hide');
 }
 
 function checkIfReady(){
@@ -20,6 +50,7 @@ function checkIfReady(){
     }
     document.getElementById("confirm-booking").disabled = false;
 }
+
 function calculatePrice(){
     if (inputService.value != "Service" && inputHairLength.value != "Hair Length"){
     var service = document.getElementById('inputService').value;

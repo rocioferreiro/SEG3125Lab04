@@ -324,14 +324,14 @@
   </div>
 
 
-  <div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" onsubmit="return false">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header border-0">
           <h5 class="modal-title" id="exampleModalLabel">Booking</h5>
         </div>
         <div class="modal-body border-0">
-          <form>
+          <form id="modal-form">
             <div class="row py-2">
               <div class="col">
                 <input type="text" class="form-control" placeholder="First name" required/>
@@ -392,12 +392,12 @@
     </div>
   </div>
 
-  <div class="toast" style="position: fixed; top: 100px; right: 5px;">
+  <div class="toast" id="success-toast" style="position: fixed; top: 100px; right: 5px;" data-autohide="false">
     <div class="toast-header justify-content-between bg-success border-0">
       <strong class="mr-auto text-light">G5</strong>
       <div class="d-flex align-items-center">
         <small class="text-light">now</small>
-        <button type="button" class="ml-4 mb-0 close border-0 bg-transparent h5" data-dismiss="toast" aria-label="Close">
+        <button type="button" class="ml-4 mb-0 close border-0 bg-transparent h5" data-dismiss="toast" aria-label="Close" id="close-toast">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
