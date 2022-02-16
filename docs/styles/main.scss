@@ -1,6 +1,20 @@
 // custom variables]
-$primary: #54D1DB;
+$primary: #77d0d7;
 $secondary: #334E68;
+$light: #F0F4F8;
+$info: #D9E2EC;
+$success: #89ce81;
+
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
 
 $enable-rounded: false;
 

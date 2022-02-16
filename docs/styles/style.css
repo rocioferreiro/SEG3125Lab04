@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
-body{background-color:#BCCCDC;}
+body{background-color:#F1F4F8;}
 .masthead {
     height: 70vh;
     background-image:  linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('../images/masthead.jpg');
@@ -35,6 +35,11 @@ input[type='checkbox'] {
 
 .staff-img {height: 200px;}
 
+.staff-img {
+    height: 200px;
+    object-fit: cover;
+}
+
 .card-flip {
     display: grid;
     grid-template: 1fr / 1fr;
@@ -66,9 +71,26 @@ input[type='checkbox']:checked + .card-container .card-flip {
 }
 
 .back {
-  background-color: #647ACB;
+  background-color: #F1F4F8;
 }
 
 .nav-item .nav-link:hover {
   background: #102A43;
+}
+
+
+/******Navbar Autohide Functions******/
+.scrolled-down{
+  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+  transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+/************************************/
+
+.line{
+    height: 0;
+    border: 1px black dashed;
+    width: 40%;
+    align-self: center;
 }
